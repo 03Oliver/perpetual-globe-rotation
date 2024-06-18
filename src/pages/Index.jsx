@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from 'react';
-import { Container, Box } from "@chakra-ui/react";
+import React, { useEffect, useRef, useState } from 'react';
+import { Container, Box, Text } from "@chakra-ui/react";
 import * as THREE from 'three';
 
 const Index = () => {
   const mountRef = useRef(null);
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
     const mount = mountRef.current;
@@ -49,8 +50,52 @@ const Index = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  function calculateTimeLeft() {
+    const difference = +new Date("2024-07-27") - +new Date();
+    let timeLeft = {};
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60)
+      };
+    }
+
+    return timeLeft;
+  }
+
+  const timerComponents = [];
+
+  Object.keys(timeLeft).forEach(interval => {
+    if (!timeLeft[interval]) {
+      return;
+    }
+
+    timerComponents.push(
+      <span key={interval}>
+        {timeLeft[interval]} {interval}{" "}
+      </span>
+    );
+  });
+
   return (
-    <Box ref={mountRef} width="100vw" height="100vh" display="flex" justifyContent="center" alignItems="center" />
+    <Box width="100vw" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+      <Box ref={mountRef} width="100%" height="80%" display="flex" justifyContent="center" alignItems="center" />
+      <Box textAlign="center" mt={4}>
+        <Text fontSize="4xl" fontFamily="monospace">DEMO DAY</Text>
+        <Text fontSize="2xl" fontFamily="monospace">{timerComponents.length ? timerComponents : <span>Time's up!</span>}</Text>
+      </Box>
+    </Box>
   );
 };
 
