@@ -18,19 +18,13 @@ const Index = () => {
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(mount.clientWidth, mount.clientHeight);
-    renderer.setClearColor(0x000000, 1);
     mount.appendChild(renderer.domElement);
 
     // Globe
     const geometry = new THREE.SphereGeometry(1, 32, 32);
-    const material = new THREE.MeshStandardMaterial({ color: 0xaaaaaa });
+    const material = new THREE.MeshBasicMaterial({ color: 0xaaaaaa, wireframe: true });
     const globe = new THREE.Mesh(geometry, material);
     scene.add(globe);
-
-    // Light
-    const light = new THREE.DirectionalLight(0xffffff, 1);
-    light.position.set(5, 5, 5).normalize();
-    scene.add(light);
 
     // Animation
     const animate = () => {
