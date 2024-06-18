@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import { Container, Box } from "@chakra-ui/react";
+import { Container, Box, Text } from "@chakra-ui/react";
 import * as THREE from 'three';
+import Countdown from 'react-countdown';
 
 const Index = () => {
   const mountRef = useRef(null);
@@ -49,8 +50,17 @@ const Index = () => {
     };
   }, []);
 
+  const Completionist = () => <Text fontSize="2xl" color="white" fontFamily="monospace" fontWeight="bold">DEMO DAY</Text>;
+
   return (
-    <Box ref={mountRef} width="100vw" height="100vh" display="flex" justifyContent="center" alignItems="center" />
+    <Box ref={mountRef} width="100vw" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+      <Text fontSize="4xl" color="white" fontFamily="monospace" fontWeight="bold" mb={4}>teleses.ai</Text>
+      <Countdown date={new Date('2024-07-27T00:00:00')} renderer={({ days, hours, minutes, seconds }) => (
+        <Text fontSize="2xl" color="white" fontFamily="monospace" fontWeight="bold">
+          {days}d {hours}h {minutes}m {seconds}s
+        </Text>
+      )} />
+    </Box>
   );
 };
 
