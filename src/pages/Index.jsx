@@ -4,7 +4,6 @@ import * as THREE from 'three';
 
 const Index = () => {
   const mountRef = useRef(null);
-  const [countdown, setCountdown] = useState('');
 
   useEffect(() => {
     const mount = mountRef.current;
@@ -50,25 +49,10 @@ const Index = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const targetDate = new Date('Jul 27, 2024').getTime();
-
-    const updateCountdown = () => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      const days = distance / (1000 * 60 * 60 * 24);
-      setCountdown(days.toFixed(6));
-    };
-
-    const interval = setInterval(updateCountdown, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <Box ref={mountRef} width="100vw" height="100vh" display="flex" justifyContent="center" alignItems="center" position="relative">
       <Text position="absolute" color="white" fontSize="4xl" fontWeight="bold" zIndex="10">
-        {countdown}
+      teleses.ai — buildspace s5
       </Text>
     </Box>
   );
