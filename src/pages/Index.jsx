@@ -51,14 +51,15 @@ const Index = () => {
   }, []);
 
   useEffect(() => {
-    const targetDate = new Date('Jul 27, 2024').getTime();
+    const now = new Date().getTime();
+    const targetDate = now + 39.193 * 24 * 60 * 60 * 1000; // 39.193 days from now
 
     const updateCountdown = () => {
       const now = new Date().getTime();
       const distance = targetDate - now;
 
       const days = distance / (1000 * 60 * 60 * 24);
-      setCountdown(days.toFixed(6));
+      setCountdown(days.toFixed(3)); // Reduce to 3 decimal places
     };
 
     const interval = setInterval(updateCountdown, 1000);
