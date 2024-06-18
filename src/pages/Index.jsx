@@ -52,11 +52,12 @@ const Index = () => {
 
   return (
     <Box ref={mountRef} width="100vw" height="100vh" display="flex" justifyContent="center" alignItems="center" position="relative">
-      <Text position="absolute" color="white" fontSize="4xl" font="roboto" fontWeight="bold" zIndex="10">
-      teleses.ai — buildspace s5
+      <Text position="absolute" color="white" fontSize="4xl" fontFamily="Roboto" fontWeight="bold" zIndex="10">
+        teleses.ai — buildspace s5
       </Text>
     </Box>
   );
 };
+
 
 export default Index;
