@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Container } from "@chakra-ui/react";
+import { Container, Box } from "@chakra-ui/react";
 import * as THREE from 'three';
 
 const Index = () => {
@@ -50,7 +50,7 @@ const Index = () => {
   }, []);
 
   return (
-    <Container ref={mountRef} centerContent maxW="container.md" height="100vh" display="flex" justifyContent="center" alignItems="center" />
+    <Box ref={mountRef} width="100vw" height="100vh" display="flex" justifyContent="center" alignItems="center" />
   );
 };
 
