@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Container, Box, Text } from "@chakra-ui/react";
 import * as THREE from 'three';
+import "@fontsource/roboto"; // Defaults to weight 400 (regular)
 
 const Index = () => {
   const mountRef = useRef(null);
@@ -51,7 +52,7 @@ const Index = () => {
 
   return (
     <Box ref={mountRef} width="100vw" height="100vh" display="flex" justifyContent="center" alignItems="center" position="relative">
-      <Text position="absolute" color="white" fontSize="4xl" fontWeight="bold" zIndex="10">
+      <Text position="absolute" color="white" fontSize="4xl" font ="roboto" fontWeight="bold" zIndex="10">
       teleses.ai — buildspace s5
       </Text>
     </Box>
