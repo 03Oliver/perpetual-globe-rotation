@@ -8,8 +8,11 @@ const Footer = () => {
         <Link as={RouterLink} to="/privacy" mx={2}>
           Privacy
         </Link>
-        <Link href="https://www.teleses.ai" mx={2}>
+        <Link href="https://www.linkedin.com/company/teleses-ai/" mx={2}>
           Team
+        </Link>
+        <Link href="https://www.teleses.ai" mx={2}>
+          Home
         </Link>
       </Flex>
     </Box>
