@@ -7,7 +7,7 @@ const Privacy = () => {
       <Text mt={2}>Effective Date: [23/06/2024]</Text>
       <Text mt={4} fontWeight="bold">Introduction</Text>
       <Text mt={2}>
-        Teleses.ai, an informal software collective participating in buildspaces s5 cohort, is not yet incorporated, referred to as ("we", "our", "us") is committed to protecting your privacy. This Privacy Policy outlines our practices regarding the collection, use, and protection of your personal data. We comply with applicable privacy regulations in the European Union (EU), India, and the United States (USA).
+        Teleses.ai, the domain and nomer of an informal software collective of friends, contracted by Collective VC Ltd, and participating in buildspaces s5 cohort, is referred to as ("we", "our", "us") and is committed to protecting your privacy. This Privacy Policy outlines our practices regarding the collection, use, and protection of your personal data. We comply with applicable privacy regulations in the European Union (EU), India, and the United States (USA).
       </Text>
       <Text mt={4} fontWeight="bold">1. Data Collection and Use</Text>
       <Text mt={2}>
