@@ -8,7 +8,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<Index />} />
-        <Route path="/privacy" element={<Privacy />} />
+        <Route exact path="/privacy" element={<Privacy />} />
       </Routes>
       <Footer />
     </Router>
