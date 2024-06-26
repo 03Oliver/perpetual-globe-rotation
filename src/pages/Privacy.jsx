@@ -1,3 +1,8 @@
+import React, { useEffect, useRef, useState } from 'react';
+import { Container, Box, Text } from "@chakra-ui/react";
+import * as THREE from 'three';
+import "@fontsource/roboto"; // Defaults to weight 400 (regular)
+
 import { Box, Text } from "@chakra-ui/react";
 
 const Privacy = () => {
