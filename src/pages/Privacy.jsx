@@ -26,7 +26,7 @@ const Privacy = () => {
       </Text>
       <Text mt={4} fontWeight="bold">4. User Rights</Text>
       <Text mt={2}>
-        Users in the EU, India, and the USA have specific rights regarding their personal data, including the right to access, correct, and delete their data. If you wish to exercise any of these rights, please contact us at team@teleses.ai.
+        Users in the EU, India, the USA - although not limited to these regions, have specific rights regarding their personal data, including the right to access, correct, and delete their data. If you wish to exercise any of these rights, please contact us at team@teleses.ai.
       </Text>
       <Text mt={4} fontWeight="bold">5. Compliance and Contact Information</Text>
       <Text mt={2}>
