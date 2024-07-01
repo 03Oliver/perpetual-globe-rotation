@@ -1,17 +1,8 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite';
 
 export default defineConfig({
+  // Other Vite configurations...
   server: {
-    host: "::",
-    port: "8080",
-    strictPort: true,
-    clearScreen: false,
-    logLevel: "info",
-    warmup: {
-      clientFiles: ["src/**/*.(js|jsx|ts|tsx|html|css)", "index.html"]
-    },
+    historyApiFallback: true,
   },
-  plugins: [react()],
-  base: ""
 });
